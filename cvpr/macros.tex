@@ -1,0 +1,24 @@
+\definecolor{SithColor}{rgb}{0.7,0,0} % color for Sith
+\newcommand{\chongyang}[1]{{\color{SithColor} Chongyang: #1}}
+\definecolor{ConsularColor}{rgb}{0,0.4,0} % color for the Jedi Consulars (e.g. Yoda)
+\definecolor{GuardianColor}{rgb}{0,0,0.8} % color for the Jedi Guardians (e.g. Obiwan)
+\newcommand{\obiwan}[1]{{\color{GuardianColor} Obiwan: #1}}
+\newcommand{\yoda}[1]{{\color{ConsularColor} Yoda: #1}}
+\newcommand{\warning}[1]{{\it\color{red} #1}}
+\newcommand{\note}[1]{{\it\color{blue} #1}}
+\newcommand{\nothing}[1]{}
+
+\newcommand{\psdraftboxDefault}{\psnodraftbox}
+
+\ifthenelse{\equal{\final}{1}}
+{
+\renewcommand{\chongyang}[1]{}
+\renewcommand{\obiwan}[1]{}
+\renewcommand{\yoda}[1]{}
+\renewcommand{\warning}[1]{}
+\renewcommand{\note}[1]{}
+}
+{}
+
+\newcommand{\filename}[1]{\url{#1}}
+\newcommand{\foldername}[1]{\url{#1}}

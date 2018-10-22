@@ -1,0 +1,48 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\input{package}
+\input{macros}
+\input{symbols}
+
+% \cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{0001} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifcvprfinal\pagestyle{empty}\fi
+
+\begin{document}
+
+\title{A Template for CVPR Submission}
+
+\author{Chongyang Ma\\
+Snap Inc.\\
+{\tt\small chongyangm@gmail.com}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\
+{\tt\small secondauthor@i2.org}
+}
+
+\maketitle
+
+\input{abstract}
+\input{introduction}
+\input{related_work}
+\input{method}
+\input{results}
+\input{conclusion}
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{paper}
+}
+
+\end{document}
