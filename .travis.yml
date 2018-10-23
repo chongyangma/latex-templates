@@ -5,8 +5,17 @@ before_install:
   - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latex-xcolor texlive-generic-extra texlive-generic-recommended texlive-science texlive-bibtex-extra
 script:
   - cd siggraph
-  - mkdir build
   - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
   - bibtex draft
+  - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
   - pdflatex -interaction=nonstopmode -halt-on-error final.tex
   - bibtex final
+  - pdflatex -interaction=nonstopmode -halt-on-error final.tex
+  - cd ..
+  - cd cvpr
+  - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
+  - bibtex draft
+  - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error final.tex
+  - bibtex final
+  - pdflatex -interaction=nonstopmode -halt-on-error final.tex
