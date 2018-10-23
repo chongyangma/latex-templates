@@ -1,0 +1,9 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+script:
+  - cd siggraph
+  - mkdir build
+  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory build draft.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory build final.tex
