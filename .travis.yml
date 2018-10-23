@@ -6,6 +6,7 @@ before_install:
 script:
   - cd siggraph
   - mkdir build
-  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory build draft.tex
-  - bibtex draft.tex paper.bib draft.aux
-  # - pdflatex -interaction=nonstopmode -halt-on-error -output-directory build final.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build -aux-directory=build draft.tex
+  - bibtex -include-directory=build draft
+  - pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build -aux-directory=build final.tex
+  - bibtex -include-directory=build final
