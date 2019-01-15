@@ -19,3 +19,11 @@ script:
   - pdflatex -interaction=nonstopmode -halt-on-error final.tex
   - bibtex final
   - pdflatex -interaction=nonstopmode -halt-on-error final.tex
+  - cd ..
+  - cd iccv
+  - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
+  - bibtex draft
+  - pdflatex -interaction=nonstopmode -halt-on-error draft.tex
+  - pdflatex -interaction=nonstopmode -halt-on-error final.tex
+  - bibtex final
+  - pdflatex -interaction=nonstopmode -halt-on-error final.tex
